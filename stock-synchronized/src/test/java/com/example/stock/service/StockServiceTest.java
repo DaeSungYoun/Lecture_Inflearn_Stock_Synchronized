@@ -1,6 +1,7 @@
 package com.example.stock.service;
 
 import com.example.stock.domain.Stock;
+import com.example.stock.facade.OptimisticLockStockFacade;
 import com.example.stock.repository.StockRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,6 +29,9 @@ class StockServiceTest {
 
     @Autowired
     PessimisticLockStockService pessimisticLockStockService;
+
+    @Autowired
+    OptimisticLockStockFacade optimisticLockStockService;
 
     @Autowired
     EntityManager entityManager;
